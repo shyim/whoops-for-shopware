@@ -10,4 +10,4 @@ cool php errors for shopware
 	),
 ```
 
-![Whoops! in Shopware](http://i.imgur.com/PDwOwXO.png)
+![Whoops! in Shopware](http://i.imgur.com/1iCjJCY.png)
