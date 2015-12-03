@@ -46,6 +46,6 @@ class Shopware_Plugins_Core_WhoopsForShopware_Bootstrap extends Shopware_Compone
             return;
         }
         $className = str_replace('\\','/',$className);
-        require_once($this->Path() . '/vendor/filp/' . $className . '.php');
+        require_once($this->Path() . '/vendor/filp/whoops/src/' . $className . '.php');
     }
 }
