@@ -42,7 +42,10 @@ class Shopware_Plugins_Core_WhoopsForShopware_Bootstrap extends Shopware_Compone
 
         if ($subject->getParam('noErrorHandler')) {
             $requestUri = $subject->Request()->getRequestUri();
-            spl_autoload_register(array($this, 'loader'));
+
+            if (file_exists($this->Path() . 'vendor/autoload.php')) {
+                require_once $this->Path() . 'vendor/autoload.php';
+            }
 
             $whoops = new Run;
 
@@ -55,14 +58,5 @@ class Shopware_Plugins_Core_WhoopsForShopware_Bootstrap extends Shopware_Compone
             $whoops->register();
             restore_error_handler();
         }
-    }
-
-    public function loader($className)
-    {
-        if (!strstr($className, 'Whoops')) {
-            return;
-        }
-        $className = str_replace('\\', '/', $className);
-        require_once($this->Path() . '/vendor/filp/whoops/src/' . $className . '.php');
     }
 }
