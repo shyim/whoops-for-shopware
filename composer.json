@@ -1,0 +1,14 @@
+{
+  "name": "shyim/whoops-for-shopware",
+  "type": "shopware-core-plugin",
+  "keywords": ["whoops", "shopware", "error", "handling", "exception"],
+  "description": "Whoops for Shopware",
+  "license": "MIT",
+  "extra": {
+    "installer-name": "WhoopsForShopware"
+  },
+  "require": {
+    "php": ">=5.5.9",
+    "composer/installers": "^1.0"
+  }
+}
