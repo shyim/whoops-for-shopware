@@ -49,7 +49,7 @@ class Shopware_Plugins_Core_WhoopsForShopware_Bootstrap extends Shopware_Compone
 
             $whoops = new Run;
 
-            if ($subject->Request()->isXmlHttpRequest() || strstr($requestUri, '/backend') || strstr($requestUri, '/ajax')) {
+            if ($subject->Request()->isXmlHttpRequest() || strstr($requestUri, '/backend') || strstr($requestUri, '/ajax') || strstr($requestUri, '/api')) {
                 $whoops->pushHandler(new JsonResponseHandler());
             } else {
                 $whoops->pushHandler(new PrettyPageHandler);
