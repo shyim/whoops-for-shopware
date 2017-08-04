@@ -1,6 +1,6 @@
 {
   "name": "shyim/whoops-for-shopware",
-  "type": "shopware-core-plugin",
+  "type": "shopware-plugin",
   "keywords": ["whoops", "shopware", "error", "handling", "exception"],
   "description": "Whoops for Shopware",
   "license": "MIT",
