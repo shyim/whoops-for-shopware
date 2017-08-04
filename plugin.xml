@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/plugin.xsd">
+    <label lang="de">Whoops für Shopware</label>
+    <label lang="en">Whoops for Shopware</label>
+    <version>1.0.0</version>
+    <copyright>Shyim</copyright>
+    <link>https://github.com/shyim/whoops-for-shopware</link>
+    <license>MIT</license>
+    <author>Shyim</author>
+</plugin>
