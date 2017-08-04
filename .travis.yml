@@ -1,0 +1,14 @@
+language: php
+php:
+- 7.0
+sudo: false
+script:
+- ./build.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: ycDcA3ha+OKii2n7p6tBHNIYUrpY9R9mwJyVcKeKfLtbxsQScFpxOFHcyk1rdGXN6CopbwlFZfOYi6NYvTmPTxeGJOs4fc6206lKTW5M2TkMvtLGcuDqlqQjuyJNoFHAsNZqLkeMFq5Zi7quNL6ryC5T4z8gBbBavrUb0NPZ0F7o73h3d9YE3MtTM4Z3mY/Df1Sd1iBbs4z1YMleW16TZgqVrOD7+WGWMprFFhHXnZX4DWrVqwZ7vZxZwFVazWWUJviOoHYaoEEK6oUQ40g31OouAhg79fuhB4JkvDinRzIgP65v33kYzQIPepWJ9CjyfmdwRCvTvJ3Sf6KERhB1lyBJeixZLNOEHrFUnBkfPZuc3t/VnpP5rK7VqdsL/e6+5ixvJVq4PE1+etKmKNRoQpf69+68ryrk6ncmMIPkQTZwA2IIduDwr0ayqhw2OpgHWtgbi6Y14tzRGGp8Cggh5KSzbovX1AF54/bYme9HOfogQvHP+EiNgT3I3J9O8gIlegf1mJGbhp5ZHk1XTfbI/DlR07NSewJMOeelCYoRB++F/MI/NdRaxCOA+Nx45TqG240iSzzOSd1CLetvmpmPRCrMwIz+CuSSV34uEMBswbQI7DTPVu3N/PGH+QthdkixE/8mkhPbwF6P6hJLOAD3ZiEtNGWhwKRCIBvsQeaBmuc=
+  file: WhoopsForShopware-*.zip
+  file_glob: true
+  on:
+    tags: true
