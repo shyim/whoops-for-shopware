@@ -50,7 +50,7 @@ class WhoopsForShopware extends Plugin
     {
         $filename = $this->getPath() . '/vendor/autoload.php';
         
-        if (is_file($filename) === false)
+        if (file_exists($filename))
         {
             require_once $filename;
         }
