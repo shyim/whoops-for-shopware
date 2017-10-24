@@ -28,17 +28,16 @@ class WhoopsForShopware extends Plugin
             
             $requestUri = $subject->Request()->getRequestUri();
             $whoops     = new Run;
-            
-            if ($subject->Request()->isXmlHttpRequest()
-                || strstr($requestUri, '/backend')
-                || strstr($requestUri, '/ajax')
-                || strstr($requestUri, '/api'))
-            {
+
+            if (
+                false !== strpos($requestUri, '/api')
+                || false !== strpos($requestUri, '/ajax')
+                || false !== strpos($requestUri, '/backend')
+                || $subject->Request()->isXmlHttpRequest()
+            ) {
                 $whoops->pushHandler(new JsonResponseHandler());
-            }
-            else
-            {
-                $whoops->pushHandler(new PrettyPageHandler);
+            } else {
+                $whoops->pushHandler(new PrettyPageHandler());
             }
             
             $whoops->register();
